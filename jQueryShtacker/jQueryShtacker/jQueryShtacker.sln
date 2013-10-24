@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQueryShtacker", "jQueryShtacker\jQueryShtacker.csproj", "{15E41E58-7C4B-47F2-AE24-C73E0F403D86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScriptShtacker", "TypeScriptShtacker\TypeScriptShtacker.csproj", "{B8F5BCCF-E939-4A18-9758-BF7D614F7A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{15E41E58-7C4B-47F2-AE24-C73E0F403D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15E41E58-7C4B-47F2-AE24-C73E0F403D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15E41E58-7C4B-47F2-AE24-C73E0F403D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F5BCCF-E939-4A18-9758-BF7D614F7A40}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F5BCCF-E939-4A18-9758-BF7D614F7A40}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{B8F5BCCF-E939-4A18-9758-BF7D614F7A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F5BCCF-E939-4A18-9758-BF7D614F7A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
