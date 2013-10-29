@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{B8F5BCCF-E939-4A18-9758-BF7D614F7A40}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="game.ts" />
+    <Content Include="assets\Images\gameBg.png" />
+    <Content Include="assets\Images\shtackerSquare.png" />
+    <Content Include="game.js" />
+    <Content Include="stylesheets\app.css" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Bitmap.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\BitmapAnimation.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Container.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\DisplayObject.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\DOMElement.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Graphics.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\MovieClip.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Shadow.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Shape.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\SpriteSheet.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Stage.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\display\Text.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\events\MouseEvent.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\AlphaMapFilter.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\AlphaMaskFilter.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\BoxBlurFilter.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\ColorFilter.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\ColorMatrix.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\ColorMatrixFilter.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\filters\Filter.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\geom\Matrix2D.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\geom\Point.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\geom\Rectangle.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\ui\Touch.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\utils\SpriteSheetBuilder.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\utils\SpriteSheetUtils.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\utils\Ticker.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\easeljs\utils\UID.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\preloadjs\AbstractLoader.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\preloadjs\PreloadJS.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\AudioPlugin.d.ts" />
+    <Content Include="definitions\createjs\soundjs\AudioPlugin.js" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\FlashPlugin.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\FlashSoundInstance.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\HTMLAudioPlugin.ts" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\HTMLSoundInstance.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\SoundInstance.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\soundjs\SoundJS.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\tweenjs\CSSPlugin.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\tweenjs\Ease.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\tweenjs\Timeline.d.ts" />
+    <TypeScriptCompile Include="definitions\createjs\tweenjs\Tween.d.ts" />
+    <Content Include="definitions\jquery-1.8.d.ts" />
+    <Content Include="assets\css\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="assets\css\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="assets\css\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="assets\css\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="assets\css\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="assets\css\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="assets\css\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="assets\css\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="assets\css\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="assets\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\css\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="assets\css\images\ui-icons_a83300_256x240.png" />
+    <Content Include="assets\css\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="assets\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\css\jquery-ui-1.8.18.custom.css" />
+    <Content Include="shtaker.html" />
+    <Content Include="javascripts\CSSPlugin.js" />
+    <Content Include="javascripts\easeljs-0.5.0.min.js" />
+    <Content Include="javascripts\FlashPlugin.js" />
+    <Content Include="javascripts\HTMLAudioPlugin.js" />
+    <Content Include="javascripts\jquery-1.8.2.min.js" />
+    <Content Include="javascripts\preloadjs-0.2.0.min.js" />
+    <Content Include="javascripts\preloadjs-images.js" />
+    <Content Include="javascripts\preloadjs-images.ts" />
+    <Content Include="javascripts\preloadjs-media-grid.js" />
+    <Content Include="javascripts\preloadjs-queue.js" />
+    <Content Include="javascripts\preloadjs-queue.ts" />
+    <Content Include="javascripts\soundjs-0.3.0.min.js" />
+    <Content Include="javascripts\soundjs-convultion.js" />
+    <Content Include="javascripts\soundjs-convultion.ts" />
+    <Content Include="javascripts\soundjs-NEXT.min.js" />
+    <Content Include="javascripts\soundjs.flashplugin-0.3.0.min.js" />
+    <Content Include="javascripts\soundjs.flashplugin-NEXT.min.js" />
+    <Content Include="javascripts\SoundJS.js" />
+    <Content Include="javascripts\soundjs\FlashAudioPlugin.swf" />
+    <Content Include="javascripts\swfobject.js" />
+    <Content Include="javascripts\tweenjs-0.3.0.min.js" />
+    <Content Include="javascripts\tweenjs-circles.js" />
+    <Content Include="javascripts\tweenjs-circles.ts" />
+    <Content Include="javascripts\tweenjs-css-example.js" />
+    <Content Include="javascripts\tweenjs-css-example.ts" />
+    <Content Include="javascripts\tweenjs-example.js" />
+    <Content Include="javascripts\tweenjs-example.ts" />
+    <Content Include="javascripts\tweenjs-simple-demo.js" />
+    <Content Include="javascripts\tweenjs-simple-demo.ts" />
+    <Content Include="javascripts\tweenjs-spark-table.js" />
+    <Content Include="javascripts\tweenjs-spark-table.ts" />
+    <Content Include="javascripts\tweenjs-tween-spark-table.js" />
+    <Content Include="javascripts\tweenjs-tween-spark-table.ts" />
+    <Content Include="Resources\Scripts\Modernizr.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\preloadjs-images.js.map" />
+    <Content Include="javascripts\soundjs-convultion.js.map" />
+    <Content Include="javascripts\tweenjs-css-example.js.map" />
+    <Content Include="javascripts\tweenjs-tween-spark-table.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <None Include="shtacker - FTP.pubxml" />
+    <None Include="shtacker - Web Deploy.pubxml" />
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TypeScriptShtacker</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="BeforeBuild">
+    <Exec Command="&quot;C:\Program Files (x86)\Microsoft SDKs\TypeScript\tsc&quot; @(TypeScriptCompile ->'&quot;%(FullPath)&quot;', ' ')" />
+  </Target>
+</Project>
