@@ -19,6 +19,7 @@
     <TypeScriptCompile Include="game.ts" />
     <Content Include="assets\Images\gameBg.png" />
     <Content Include="assets\Images\shtackerSquare.png" />
+    <TypeScriptCompile Include="game.d2.ts" />
     <Content Include="game.js" />
     <Content Include="stylesheets\app.css" />
     <TypeScriptCompile Include="definitions\createjs\easeljs\display\Bitmap.d.ts" />
