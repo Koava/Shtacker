@@ -25,7 +25,7 @@ class Greeter {
         cvx.fillStyle = "rgba(0, 0, 200, 0.5)";
         cvx.fillRect(30, 30, 55, 50);
 
-        cvx.
+        //cvx.
     }
 
     start() {

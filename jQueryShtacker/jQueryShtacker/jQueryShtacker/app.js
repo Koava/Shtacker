@@ -13,11 +13,13 @@ var Greeter = (function () {
         this.canvas.width = 600;
         this.canvas.innerHTML = "<h1>Hallow World</h1>";
         var cvx = this.canvas.getContext("2d");
+
         cvx.fillStyle = "rgd(200,0,0)";
         cvx.fillRect(10, 10, 55, 50);
 
         cvx.fillStyle = "rgba(0, 0, 200, 0.5)";
         cvx.fillRect(30, 30, 55, 50);
+        //cvx.
     }
     Greeter.prototype.start = function () {
         var _this = this;
@@ -37,3 +39,4 @@ window.onload = function () {
     var greeter = new Greeter(el);
     greeter.start();
 };
+//# sourceMappingURL=app.js.map
