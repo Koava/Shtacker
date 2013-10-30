@@ -21,7 +21,8 @@ var Game = (function () {
     }
     Game.prototype.initiate = function () {
         var _this = this;
-        createjs.Ticker.setFPS(1000);
+        this.stage.removeAllChildren();
+        createjs.Ticker.setInterval(5);
         createjs.Ticker.addListener(this.stage, false);
 
         //Can't get this working, what's up with this?
@@ -83,6 +84,7 @@ var Game = (function () {
     Game.prototype.startPlay = function () {
         var _this = this;
         this.reset();
+        this.addRowToStage();
         this.stage.onPress = function () {
             _this.clicked = true;
         };
@@ -128,6 +130,7 @@ var Game = (function () {
                 } else {
                     this.previousRowRange = [this.rows[this.currentRow][0].x, this.rows[this.currentRow][(this.rows[this.currentRow].length - 1)].x];
                     this.currentRow++;
+                    this.addRowToStage();
                 }
             }
 
@@ -164,8 +167,7 @@ var Game = (function () {
 
     Game.prototype.getCircle = function (xCentre, yCentre) {
         var circle = new createjs.Shape();
-        circle.graphics.setStrokeStyle(6);
-        circle.graphics.beginLinearGradientStroke(["#FFCC00", "#FFCC66"], [0, 1], 0, 0, 0, 10).drawCircle(0, 0, this.circleRadius);
+        circle.graphics = this.graphic;
         circle.alpha = 0.8;
         circle.x = xCentre;
         circle.y = yCentre;
@@ -182,102 +184,36 @@ var Game = (function () {
         this.stage.onPress = null;
         createjs.Tween.get(this.youWinContainer).to({ x: 0 }, 500).wait(3000).to({ x: 500 }, 500).call(this.initiate, null, this);
     };
+
+    Game.prototype.addRowToStage = function () {
+        for (var i = 0; i < this.rows[this.currentRow].length; i++) {
+            this.stage.addChild(this.rows[this.currentRow][i]);
+        }
+    };
     Game.prototype.reset = function () {
         this.removeMenu();
-        this.circle1 = this.getCircle(440, 581);
-        this.circle2 = this.getCircle(478, 581);
-        this.circle3 = this.getCircle(516, 581);
-        this.stage.addChild(this.circle1);
-        this.stage.addChild(this.circle2);
-        this.stage.addChild(this.circle3);
 
-        this.circle11 = this.getCircle(440, 543);
-        this.circle12 = this.getCircle(478, 543);
-        this.circle13 = this.getCircle(516, 543);
-        this.stage.addChild(this.circle11);
-        this.stage.addChild(this.circle12);
-        this.stage.addChild(this.circle13);
-
-        this.circle21 = this.getCircle(440, 505);
-        this.circle22 = this.getCircle(478, 505);
-        this.circle23 = this.getCircle(516, 505);
-        this.stage.addChild(this.circle21);
-        this.stage.addChild(this.circle22);
-        this.stage.addChild(this.circle23);
-
-        this.circle31 = this.getCircle(440, 468);
-        this.circle32 = this.getCircle(479, 468);
-        this.circle33 = this.getCircle(516, 468);
-        this.stage.addChild(this.circle31);
-        this.stage.addChild(this.circle32);
-        this.stage.addChild(this.circle33);
-
-        this.circle41 = this.getCircle(440, 430);
-        this.circle42 = this.getCircle(478, 430);
-        this.circle43 = this.getCircle(516, 430);
-        this.stage.addChild(this.circle41);
-        this.stage.addChild(this.circle42);
-        this.stage.addChild(this.circle43);
-
-        this.circle51 = this.getCircle(440, 392);
-        this.circle52 = this.getCircle(479, 392);
-        this.stage.addChild(this.circle51);
-        this.stage.addChild(this.circle52);
-
-        this.circle61 = this.getCircle(440, 354);
-        this.circle62 = this.getCircle(479, 354);
-        this.stage.addChild(this.circle61);
-        this.stage.addChild(this.circle62);
-
-        this.circle71 = this.getCircle(440, 316);
-        this.circle72 = this.getCircle(479, 316);
-        this.stage.addChild(this.circle71);
-        this.stage.addChild(this.circle72);
-
-        this.circle81 = this.getCircle(440, 278);
-        this.circle82 = this.getCircle(479, 278);
-        this.stage.addChild(this.circle81);
-        this.stage.addChild(this.circle82);
-
-        this.circle91 = this.getCircle(440, 240);
-        this.circle92 = this.getCircle(479, 240);
-        this.stage.addChild(this.circle91);
-        this.stage.addChild(this.circle92);
-
-        this.circle101 = this.getCircle(440, 202);
-        this.circle102 = this.getCircle(479, 202);
-        this.stage.addChild(this.circle101);
-        this.stage.addChild(this.circle102);
-
-        this.circle111 = this.getCircle(440, 164);
-        this.stage.addChild(this.circle111);
-
-        this.circle121 = this.getCircle(440, 126);
-        this.stage.addChild(this.circle121);
-
-        this.circle131 = this.getCircle(440, 88);
-        this.stage.addChild(this.circle131);
-
-        this.circle141 = this.getCircle(440, 50);
-        this.stage.addChild(this.circle141);
+        this.graphic = new createjs.Graphics();
+        this.graphic.setStrokeStyle(6);
+        this.graphic.beginLinearGradientStroke(["#FFCC00", "#FFCC66"], [0, 1], 0, 0, 0, 10).drawCircle(0, 0, this.circleRadius);
 
         //matrix of circles and columns
         this.rows = [];
-        this.rows.push([this.circle1, this.circle2, this.circle3]);
-        this.rows.push([this.circle11, this.circle12, this.circle13]);
-        this.rows.push([this.circle21, this.circle22, this.circle23]);
-        this.rows.push([this.circle31, this.circle32, this.circle33]);
-        this.rows.push([this.circle41, this.circle42, this.circle43]);
-        this.rows.push([this.circle51, this.circle52]);
-        this.rows.push([this.circle61, this.circle62]);
-        this.rows.push([this.circle71, this.circle72]);
-        this.rows.push([this.circle81, this.circle82]);
-        this.rows.push([this.circle91, this.circle92]);
-        this.rows.push([this.circle101, this.circle102]);
-        this.rows.push([this.circle111]);
-        this.rows.push([this.circle121]);
-        this.rows.push([this.circle131]);
-        this.rows.push([this.circle141]);
+        this.rows.push([this.getCircle(440, 581), this.getCircle(479, 581), this.getCircle(516, 581)]);
+        this.rows.push([this.getCircle(440, 543), this.getCircle(479, 543), this.getCircle(516, 543)]);
+        this.rows.push([this.getCircle(440, 505), this.getCircle(478, 505), this.getCircle(516, 505)]);
+        this.rows.push([this.getCircle(440, 468), this.getCircle(479, 468), this.getCircle(516, 468)]);
+        this.rows.push([this.getCircle(440, 430), this.getCircle(479, 430), this.getCircle(516, 430)]);
+        this.rows.push([this.getCircle(440, 392), this.getCircle(479, 392)]);
+        this.rows.push([this.getCircle(440, 354), this.getCircle(479, 354)]);
+        this.rows.push([this.getCircle(440, 316), this.getCircle(479, 316)]);
+        this.rows.push([this.getCircle(440, 278), this.getCircle(479, 278)]);
+        this.rows.push([this.getCircle(440, 240), this.getCircle(479, 240)]);
+        this.rows.push([this.getCircle(440, 202), this.getCircle(479, 202)]);
+        this.rows.push([this.getCircle(440, 164)]);
+        this.rows.push([this.getCircle(440, 126)]);
+        this.rows.push([this.getCircle(440, 88)]);
+        this.rows.push([this.getCircle(440, 50)]);
 
         this.previousRowRange = [0, this.stageWidth];
 
@@ -286,7 +222,6 @@ var Game = (function () {
         this.direction = "back";
         this.speed = 1;
         this.clicked = false;
-        this.stage.update();
     };
     return Game;
 })();
