@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Shtacker</title>
+    <link rel="stylesheet" href="/stylesheets/app.d2.css" type="text/css" />
+    <script type="text/javascript" src="/js/easeljs-0.7.0.min.js"></script>
+    <script type="text/javascript" src="/js/tweenjs-0.5.0.min.js"></script>
+    <script type="text/javascript" src="/game.d2.js"></script>
+    <script type="text/javascript">
+        var speed = 6; // colums/s
+        var colums = 12;
+        var rows = 15;
+        var gameSettings = new GameSettings(speed, colums, rows);
+
+        window.onload = function () {
+            new GameHost("gameCanvas", gameSettings);
+        }
+    </script>
+</head>
+<body>
+    <header id="headerContent">
+        <h1>Shtacker</h1>
+    </header>
+    <section id="mainContent">
+        <div id="gameContainer">
+            <canvas id="gameCanvas" width="384" height="512"></canvas>
+            <div id="fpsDisplay">-- fps</div>
+        </div>
+    </section>
+    <footer>
+        &copy; Koava 2013
+    </footer>
+</body>
+</html>
